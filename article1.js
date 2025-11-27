@@ -12,6 +12,8 @@ fetch('header.html')
      const menu = document.getElementById("menu");
     const barsMobile = document.getElementById("fa-bars");
     const xMobile = document.getElementById("fa-x");
+      let  moonIcon = document.getElementById('fa-moon')
+      let  sunIcon = document.getElementById('fa-sun')
     
 
     barsMobile.addEventListener("click", function () {
@@ -25,17 +27,24 @@ fetch('header.html')
       barsMobile.style.display = "block";
       xMobile.style.display = "none";
     });
-    document.getElementById('fa-moon').addEventListener('click', function(){
+   moonIcon.addEventListener('click', function(){
       document.body.classList.toggle('dark')
+      moonIcon.style.display= 'none'
+      sunIcon.style.display ='block'
       header.classList.toggle('dark')
-      article1.classList.toggle('dark')
-
        if(document.body.classList.contains('dark')){
       localStorage.setItem('theme' ,"dark" )
     }else{
        localStorage.setItem('theme' ,"light" )
        
     }
+    })
+   sunIcon.addEventListener('click', function(){
+      document.body.classList.remove('dark')
+      moonIcon.style.display= 'block'
+      sunIcon.style.display ='none'
+      header.classList.remove('dark')
+      
     })
 })
 
