@@ -149,7 +149,7 @@ min-width: 100%;
 max-width: 400px;
 height: 232px;
 top: 120px;
-left: 120px;
+/* left: 120px; */
 margin-bottom: 0.25rem;
 padding: 1.25em;
 display: inline-block;
