@@ -32,6 +32,7 @@ fetch('header.html')
       moonIcon.style.display= 'none'
       sunIcon.style.display ='block'
       header.classList.toggle('dark')
+      article1.classList.toggle('dark')
        if(document.body.classList.contains('dark')){
       localStorage.setItem('theme' ,"dark" )
     }else{
@@ -44,16 +45,24 @@ fetch('header.html')
       moonIcon.style.display= 'block'
       sunIcon.style.display ='none'
       header.classList.remove('dark')
+      article1.classList.remove('dark')
       
     })
-})
-
-const savedtheme = localStorage.getItem('theme')
+    const savedtheme = localStorage.getItem('theme')
 if(savedtheme === 'dark'){
    document.body.classList.toggle('dark')
       header.classList.toggle('dark')
       article1.classList.toggle('dark')
+      sunIcon.style.display='block'
+      moonIcon.style.display='none'
+}else{
+  moonIcon.style.display='block'
+sunIcon.style.display='none'
+
 }
+
+})
+
 
 
 fetch('footer.html')

@@ -50,14 +50,21 @@ fetch('header.html')
       header.classList.remove('dark')
       
     })
-})
-
 const savedtheme = localStorage.getItem('theme')
-if(savedtheme === 'dark'){
+    if(savedtheme === 'dark'){
    document.body.classList.toggle('dark')
       header.classList.toggle('dark')
-      
+      article1.classList.toggle('dark')
+      sunIcon.style.display='block'
+      moonIcon.style.display='none'
+}else{
+  moonIcon.style.display='block'
+sunIcon.style.display='none'
+
 }
+})
+
+
 
 
 fetch('footer.html')
