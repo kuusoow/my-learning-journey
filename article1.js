@@ -1,12 +1,8 @@
-
 import{articles} from '/data.js'
-
-
-// console.log(articles)
-
 const header = document.getElementById('header')
 
 const footer = document.getElementById('footer')
+const article1 =document.getElementById('article1')
 
 fetch('header.html')
 .then(res => res.text())
@@ -32,6 +28,8 @@ fetch('header.html')
     document.getElementById('fa-moon').addEventListener('click', function(){
       document.body.classList.toggle('dark')
       header.classList.toggle('dark')
+      article1.classList.toggle('dark')
+
        if(document.body.classList.contains('dark')){
       localStorage.setItem('theme' ,"dark" )
     }else{
@@ -45,6 +43,7 @@ const savedtheme = localStorage.getItem('theme')
 if(savedtheme === 'dark'){
    document.body.classList.toggle('dark')
       header.classList.toggle('dark')
+      article1.classList.toggle('dark')
 }
 
 
@@ -55,6 +54,8 @@ footer.innerHTML = data
 })
 
 
+
+const recentPost= document.getElementById('recen-post')
 function renderaricles(){
 let articleHtml =''
   
@@ -78,11 +79,4 @@ let articleHtml =''
 
 
 }
-console.log(renderaricles(articles))
-
-document.getElementById('articles').innerHTML = renderaricles(articles)
-
-
-
-
-
+recentPost.innerHTML = renderaricles(articles)
