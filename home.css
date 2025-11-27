@@ -144,7 +144,7 @@ padding-left: 1em;
   padding: 0;
 }
 .article img{
-border-radius: 1rem;
+border-radius: 1.2rem;
 width: 93%;
 /* max-width: 400px; */
 height: 232px;
@@ -207,7 +207,7 @@ display: block;
         footer p{
                color: #D7D7D7;
                padding-top: 0;
-               padding-bottom: 20px;
+               
                 font-weight: 400;
             font-size: 0.75em;
                
